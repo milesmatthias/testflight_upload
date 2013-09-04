@@ -28,7 +28,7 @@ module Testflight
       :distribution_lists => (@configuration.distribution_lists || []).join(","),
       :notify             => @configuration.notify || false,
       :replace            => @configuration.replace || false,
-      :dsym               => File.new(@configuration.built_app_zipped_dsym_path, 'rb')
+      :dsym               => File.new(@configuration.zipped_dsym_path, 'rb')
     }
     puts "Uploading build to TestFlight..."
     if @configuration.verbose
