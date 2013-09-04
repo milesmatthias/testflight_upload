@@ -3,15 +3,11 @@ require 'json'
 require 'tmpdir'
 require 'fileutils'
 
-module Testflight
+class Testflight
   ENDPOINT = "https://testflightapp.com/api/builds.json"
 
   def initialize(configuration)
     @configuration = configuration
-  end
-
-  def configure(&block)
-    yield @configuration
   end
 
   def prepare
