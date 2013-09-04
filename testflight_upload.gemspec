@@ -9,4 +9,5 @@ Gem::Specification.new do |s|
   s.description = "A simple Testflight uploader for when you already have everything built and archived."
   s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
   s.add_dependency(%q<json>, [">= 0"])
+  s.add_dependency(%q<terminal-notifier>, [">= 0"])
 end

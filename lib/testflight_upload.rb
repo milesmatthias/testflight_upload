@@ -6,8 +6,20 @@ require 'fileutils'
 class Testflight
   ENDPOINT = "https://testflightapp.com/api/builds.json"
 
-  def initialize(configuration)
-    @configuration = configuration
+  def initialize(&block)
+    @configuration = Configuration.new(
+      :ipa_path => nil,
+      :zipped_dsym_path => nil,
+      :distribution_lists => nil,
+      :replace => false,
+      :notify_testers => false,
+      :user_notification => false,
+      :verbose => false,
+      :api_token => nil,
+      :team_token => nil,
+      :release_notes_text => nil
+    )
+    yield @configuration if block_given?
   end
 
   def prepare
@@ -47,6 +59,8 @@ class Testflight
     
     if (response.code == 201) || (response.code == 200)
       puts "Upload complete."
+      if @configuration.user_notification
+        system "terminal-notifier -title 'Testflight Upload' -message 'Upload completed successfully.' -sound default"
     else
       puts "Upload failed. (#{response})"
     end
