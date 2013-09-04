@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.date = "2013-09-04"
   s.summary = "A simple Testflight uploader for when you already have everything built and archived."
   s.description = "A simple Testflight uploader for when you already have everything built and archived."
-  s.files = ["testflight_upload.rb"]
   s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
   s.add_dependency(%q<json>, [">= 0"])
 end
