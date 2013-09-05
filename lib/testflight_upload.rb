@@ -66,6 +66,9 @@ class Testflight
       end
     else
       puts "Upload failed. (#{response})"
+      if @configuration.user_notification
+        system "terminal-notifier -title 'Testflight Upload' -message 'Upload failed with message: #{response}' -sound default"
+      end
     end
   end
   
