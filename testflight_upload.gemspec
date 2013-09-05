@@ -10,5 +10,4 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<rest-client>, ["~> 1.6.1"])
   s.add_dependency(%q<json>, [">= 0"])
   s.add_dependency(%q<terminal-notifier>, [">= 0"])
-  s.add_dependency(%q<ostruct>, [">= 0"])
 end
