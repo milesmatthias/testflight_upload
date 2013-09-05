@@ -15,6 +15,7 @@ class Testflight
       :notify_testers => false,
       :user_notification => false,
       :verbose => false,
+      :dry_run => false,
       :api_token => nil,
       :team_token => nil,
       :release_notes_text => nil
