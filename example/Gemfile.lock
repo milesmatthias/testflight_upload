@@ -1,0 +1,25 @@
+GIT
+  remote: https://github.com/milesmatthias/testflight_upload
+  revision: 25ee76dfc5135d4aed439088289fad2e1ef44502
+  specs:
+    testflight_upload (0.0.2)
+      json
+      rest-client (~> 1.6.1)
+      terminal-notifier
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (1.8.0)
+    mime-types (1.25)
+    rake (10.1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    terminal-notifier (1.5.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  testflight_upload!

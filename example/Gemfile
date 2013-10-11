@@ -1,0 +1,4 @@
+source 'https://rubygems.org'
+
+gem 'rake'
+gem 'testflight_upload', :git => 'https://github.com/milesmatthias/testflight_upload'

@@ -1,0 +1,27 @@
+require 'testflight_upload'
+
+namespace :tf do
+
+  desc "Get testflight version"
+  task "version" do
+    uploader = Testflight.new
+    uploader.version()
+  end
+
+  desc "Deploy an IPA to testflight; note: doesn't actually work; just example code."
+  task :deploy do
+    uploader = Testflight.new do |config|
+      config.ipa_path = "HelloWorld.ipa"
+      config.zipped_dsym_path = "HelloWorld.app.dSYM.zip"
+      config.distribution_lists = [ENV["dist"]]
+      config.replace = ENV["replace"]
+      config.notify_testers = ENV["notify"]
+      config.user_notification = true
+      config.verbose = true
+      config.api_token = "xxxxxxxx"
+      config.team_token = "xxxxxxxx"
+    end
+    uploader.deploy()
+  end
+
+end
