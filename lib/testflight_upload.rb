@@ -25,7 +25,7 @@ class Testflight
   end
 
   def version
-    puts "1.0"
+    puts "0.0.2"
   end
 
   def prepare

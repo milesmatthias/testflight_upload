@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "testflight_upload"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.authors = "Miles Matthias"
   s.email = "miles.matthias@gmail.com"
   s.homepage = "https://github.com/milesmatthias/testflight_upload"
