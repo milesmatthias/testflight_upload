@@ -2,12 +2,13 @@ require 'rest_client'
 require 'json'
 require 'tmpdir'
 require 'fileutils'
+require 'ostruct'
 
 class Testflight
   ENDPOINT = "https://testflightapp.com/api/builds.json"
 
   def initialize(&block)
-    @configuration = Struct.new(
+    @configuration = OpenStruct.new(
       :ipa_path => nil,
       :zipped_dsym_path => nil,
       :distribution_lists => nil,
