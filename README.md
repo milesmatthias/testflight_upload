@@ -3,6 +3,17 @@ testflight_upload
 
 Already have everything you need to send to Testflight already built and archived and just need to upload to Testflight in your rake tasks? Use this gem.
 
+installing
+==========
+
+`gem install testflight_upload`
+
+OR in your Gemfile:
+
+```ruby
+gem 'testflight_upload', :git => 'https://github.com/milesmatthias/testflight_upload'
+```
+
 syntax
 ========
 
