@@ -24,6 +24,10 @@ class Testflight
     yield @configuration if block_given?
   end
 
+  def version
+    puts "1.0"
+  end
+
   def prepare
     puts "Nothing to prepare!"
   end
