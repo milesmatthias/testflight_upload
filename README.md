@@ -11,7 +11,7 @@ installing
 OR in your Gemfile:
 
 ```ruby
-gem 'testflight_upload', :git => 'https://github.com/milesmatthias/testflight_upload'
+gem 'testflight_upload'
 ```
 
 syntax
