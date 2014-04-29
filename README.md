@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/testflight_upload.svg)](http://badge.fury.io/rb/testflight_upload)
+
 testflight_upload
 =================
 
